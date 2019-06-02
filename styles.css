@@ -3,15 +3,21 @@ html, body {
     padding: 0; 
 }
 
-div.center {
-    width: 800px;
-    margin: 0 auto;
+.flex_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-div.screenshots {
-    width: 400px;
+article {
+
 }
 
-.screenshots img {
-    float: right;
+footer {
+
+}
+
+.flex_item {
+    flex: 1; /* flex: 1 1 0 */
+    overflow: auto;
 }
