@@ -3,15 +3,42 @@
     <title>Instagram</title>
     <link rel="shortcut icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        var images = [
+            "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
+            "https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg",
+            "https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg",
+            "https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg",
+            "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg"
+        ];
+
+        var currentImageIndex = 0;
+        
+        function changeScreenshot(elem, imageUrl) {
+            elem.src = imageUrl
+        }
+
+        function calculateNextIndexAsRotated(currentIndex, maxIndex) {
+            return (currentIndex + 1) % maxIndex
+        }
+
+        function showNextImage() {
+            var currentImage = document.getElementById("screenshot");
+            var newImageIndex = calculateNextIndexAsRotated(currentImageIndex, images.length);
+
+            changeScreenshot(currentImage, images[newImageIndex]);
+            currentImageIndex = newImageIndex;
+        }
+
+        (function() {
+            setInterval(showNextImage, 3000);
+        })();
+    </script>
 </head>
 <body>
     <div class="center">
         <div class="screenshots">
-            <img src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg">
-            <img src="https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg">
-            <img src="https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg">
-            <img src="https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg">
-            <img src="https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg">
+            <img id="screenshot" src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg">
         </div>
     </div>
 </body>
