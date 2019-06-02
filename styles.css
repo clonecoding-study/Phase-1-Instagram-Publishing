@@ -1,6 +1,7 @@
 html, body { 
     margin: 0; 
     padding: 0; 
+    height: 100%;
 }
 
 .flex_container {
@@ -9,12 +10,16 @@ html, body {
     height: 100%;
 }
 
+main {
+    flex-grow: 5;
+}
+
 article {
 
 }
 
 footer {
-
+    flex-grow: 1;
 }
 
 .flex_item {
