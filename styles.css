@@ -7,3 +7,11 @@ div.center {
     width: 800px;
     margin: 0 auto;
 }
+
+div.screenshots {
+    width: 400px;
+}
+
+img.aligned-right {
+    float: right;
+}
