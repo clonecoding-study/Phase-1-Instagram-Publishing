@@ -12,6 +12,6 @@ div.screenshots {
     width: 400px;
 }
 
-img.aligned-right {
+.screenshots img {
     float: right;
 }
