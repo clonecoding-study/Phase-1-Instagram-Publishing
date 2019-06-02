@@ -1,4 +1,9 @@
+html, body { 
+    margin: 0; 
+    padding: 0; 
+}
+
 div.center {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
 }
